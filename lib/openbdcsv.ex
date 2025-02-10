@@ -44,7 +44,7 @@ defmodule OpenBDCSV do
     result
   end
 
-  defp fetch_book_data(isbn) do
+  def fetch_book_data(isbn) do
     url = @api_url <> isbn
 
     case HTTPoison.get(url) do
